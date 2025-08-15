@@ -264,7 +264,7 @@ int main() {
         printf("\nVolume of the sphere is: %0.2lf", volume);
     }
     
-    */
+
     
     // compound interest calculator
 
@@ -292,6 +292,141 @@ int main() {
     total = principal * pow(1 + rate / timesCompounded, timesCompounded * years);
 
     printf("After %d years, the total will be $%.2f", years, total);
+
+    */
+
+    // if statements
+
+    // int age = 0;
+    
+    // printf("Enter ur age: ");
+    // scanf("%d", &age);
+
+    // if(age >= 21){
+    //     printf("you can buy alcohol");
+    // }
+    // else{
+    //     printf("u cant buy alcohol");
+    // }
+
+    // bool isStudent = true;
+
+    // if (isStudent) {
+    //     printf("Yes");
+    // }
+    // else {
+    //     printf("No");
+    // }
+
+    // char name[50] = "";
+    
+    // printf("enter ur name: ");
+    // fgets(name, sizeof(name), stdin);
+    // name[strlen(name) - 1] = '\0';
+    
+    // if(strlen(name) == 0){
+    //     printf("no name");
+    // }
+    // else {
+    //     printf("Hello %s!", name);
+    // }
+
+
+    // CONVERTER PROGRAM
+
+    
+    int choice = 0;
+    int convertation = 0;
+    float userInput = 0.0f;
+    float output = 0.0f;
+
+    printf("What do you want to convert? (1 - KG/LBS, 2 - KM/MI, 3(TEMP) - C/F) ");
+    scanf("%d", &choice);
+
+    if (choice == 1) {
+        printf("CONVERTING WEIGHT");
+        printf("\nHow are we converting? (1 - KG --> LBS, 2 - LBS --> KG) ");
+        scanf("%d", &convertation);
+
+        printf("Enter weight: ");
+        scanf("%f", &userInput);
+        
+        if(convertation == 1){
+
+            // KG TO LBS
+
+            output = userInput * 2.2;
+            printf("%.3f kg is %.3f lbs", userInput, output);
+        }
+        else if (convertation == 2){
+
+            // LBS TO KG
+
+            output = userInput / 2.2;
+            printf("%.3f lbs is %.3f kg", userInput, output);
+        }
+        else{
+            printf("Invalid input");
+        }
+        
+    }
+    else if (choice == 2) {
+        printf("CONVERTING DISTANCE");
+        printf("\nHow are we converting? (1 - KM --> MI, 2 - MI --> KM) ");
+        scanf("%d", &convertation);
+
+        printf("Enter distance: ");
+        scanf("%f", &userInput);
+        
+        if(convertation == 1){
+
+            // KM TO MI
+
+            output = userInput / 1.609344;
+            printf("%.3f km is %.3f mi", userInput, output);
+        }
+        else if (convertation == 2){
+
+            // MI TO KM
+
+            output = userInput * 1.609344;
+            printf("%.3f mi is %.3f km", userInput, output);
+        }
+        else{
+            printf("Invalid input");
+        }
+    }
+    else if (choice == 3) {
+        printf("CONVERTING TEMPERATURRE");
+        printf("\nHow are we converting? (1 - C --> F, 2 - F --> C) ");
+        scanf("%d", &convertation);
+
+        printf("Enter temperature: ");
+        scanf("%f", &userInput);
+        
+        if(convertation == 1){
+
+            // C TO F 
+
+            output = (userInput * 1.8) + 32;
+            printf("%.1f C is %.1f F", userInput, output);
+        }
+        else if (convertation == 2){
+
+            // F TO C 
+
+            output = (userInput - 32) / 1.8 ;
+            printf("%.1f F is %.1f C", userInput, output);
+        }
+        else{
+            printf("Invalid input");
+        }
+    }
+    else {
+        printf("Invalid input");
+    }
+
+
 
     return 0;
 }

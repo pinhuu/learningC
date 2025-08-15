@@ -293,48 +293,48 @@ int main() {
 
     printf("After %d years, the total will be $%.2f", years, total);
 
-    */
+    
 
     // if statements
 
-    // int age = 0;
+    int age = 0;
     
-    // printf("Enter ur age: ");
-    // scanf("%d", &age);
+    printf("Enter ur age: ");
+    scanf("%d", &age);
 
-    // if(age >= 21){
-    //     printf("you can buy alcohol");
-    // }
-    // else{
-    //     printf("u cant buy alcohol");
-    // }
+    if(age >= 21){
+        printf("you can buy alcohol");
+    }
+    else{
+        printf("u cant buy alcohol");
+    }
 
-    // bool isStudent = true;
+    bool isStudent = true;
 
-    // if (isStudent) {
-    //     printf("Yes");
-    // }
-    // else {
-    //     printf("No");
-    // }
+    if (isStudent) {
+        printf("Yes");
+    }
+    else {
+        printf("No");
+    }
 
-    // char name[50] = "";
+    char name[50] = "";
     
-    // printf("enter ur name: ");
-    // fgets(name, sizeof(name), stdin);
-    // name[strlen(name) - 1] = '\0';
+    printf("enter ur name: ");
+    fgets(name, sizeof(name), stdin);
+    name[strlen(name) - 1] = '\0';
     
-    // if(strlen(name) == 0){
-    //     printf("no name");
-    // }
-    // else {
-    //     printf("Hello %s!", name);
-    // }
+    if(strlen(name) == 0){
+        printf("no name");
+    }
+    else {
+        printf("Hello %s!", name);
+    }
 
 
     // CONVERTER PROGRAM
 
-    
+
     int choice = 0;
     int convertation = 0;
     float userInput = 0.0f;
@@ -426,7 +426,43 @@ int main() {
         printf("Invalid input");
     }
 
+    
 
+    // SWITCHES
+
+    int dayOfWeek = 86;
+
+    switch(dayOfWeek){
+        case 1:
+            printf("Monday");
+            break;
+        case 2:
+            printf("Tuesday");
+            break;
+        case 3:
+            printf("Wednesday");
+            break;
+        case 4:
+            printf("Thursday");
+            break;
+        case 5:
+            printf("Friday");
+            break;
+        case 6:
+            printf("Saturday");
+            break;
+        case 7:
+            printf("Sunday");
+            break;
+        default:
+            printf("Enter number (1-7)");
+            break;
+
+    }
+
+    */
+
+    
 
     return 0;
 }

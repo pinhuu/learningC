@@ -4,6 +4,16 @@
 #include <string.h>
 #include <math.h>
 
+/*
+void happyBday(char name[], int age){
+    printf("\n Happy bday");
+    printf("\n Happy bday");
+    printf("\n Happy bday dear %s", name);
+    printf("\n Happy bday");
+    printf("\n you are %d yrs old now!", age);
+}
+*/
+
 int main() {
 
     /*
@@ -460,9 +470,92 @@ int main() {
 
     }
 
-    */
+    
+
+    // CALCULATOR SIMPLE
+
+    double num1 = 0.0;
+    double num2 = 0.0;
+    char operator = '\0';
+    double result = 0.0;
+
+    printf("Enter the first number: ");
+    scanf("%lf", &num1);
+    printf("Enter the operator (+ - / *): ");
+    scanf(" %c", &operator);
+    printf("Enter the second number: ");
+    scanf("%lf", &num2);
+
+    switch(operator){
+        case '+':
+            result = num1 + num2;
+            printf("%.2lf", result);
+            break;
+        case '-':
+            result = num1 - num2;
+            printf("%.2lf", result);
+            break;
+        case '/':
+            if(num2 == 0){
+                printf("You cant divide by zero");
+            }
+            else {
+                result = num1 / num2;
+                printf("%.2lf", result);
+            }
+            break;
+        case '*':
+            result = num1 * num2;
+            printf("%.2lf", result);
+            break;
+        default:
+            printf("Invalid operator");
+    }
+    
+    
+
+    // LOGICAL OPERATOR
+
+    int temp = 0;
+    
+    if (temp <= 0 || temp >= 30)
+    {
+        printf("the temperature is bad");
+    }
+    else
+    {
+        printf("the temperature is good");
+    }
+    
+    
+
+    bool isSunny = false;
+
+    if (!isSunny)
+    {
+        printf("It is cloudy outside");
+    }
+    else {
+        printf("It is sunny outside");
+    }
 
     
+
+    // FUNCTIONS !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+
+    char name[50] = "";
+    int age = 0;
+
+    printf("Enter ur name: ");
+    fgets(name, sizeof(name), stdin);
+    name[strlen(name) - 1] = '\0';
+
+    printf("Enter ur age: ");
+    scanf("%d", &age);
+
+    happyBday(name, age);
+
+    */
 
     return 0;
 }

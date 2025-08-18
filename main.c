@@ -14,10 +14,49 @@ void happyBday(char name[], int age){
 }
 */
 
-int square(int num){
+/*
+double cube(double num){
 
-    int result = num * num;
+    return num * num * num;
 
+
+}
+
+double square(double num){
+
+    return num * num;
+}
+*/
+
+/*
+bool ageCheck(int age){
+
+    if(age >= 18){
+        return true;
+    }
+    else {
+        return false;
+    }
+
+}
+*/
+
+
+/*
+int getMax(int x, int y){
+
+    if(x >= y){
+        return x;
+    }
+    else{
+        return y;
+    }
+    
+}
+*/
+
+int add(int x, int y){
+    int result = x + y;
     return result;
 }
 
@@ -562,15 +601,42 @@ int main() {
 
     happyBday(name, age);
 
-    */
     
-    int x = square(2);
-    int y = square(3);
-    int z = square(4);
+    
+    double x = cube(2);
+    double y = square(3);
+    double z = square(4);
 
-    printf("%d\n", x);
-    printf("%d\n", y);
-    printf("%d\n", z);
+    printf("%lf\n", x);
+    printf("%lf\n", y);
+    printf("%lf\n", z);
+
+    *
+
+    int age = 21;
+
+    if (ageCheck(age))
+    {
+        printf("Uare 18+");
+    }
+    else{
+        printf("U are not 18");
+    }
+    
+
+    int max = getMax(12, 2);
+
+    printf("%d", max);
+
+    */
+
+    // variable scope
+
+    int result = add(1, 3);
+
+    printf("%d", result);
+
+
 
     return 0;
 }
